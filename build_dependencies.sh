@@ -31,3 +31,4 @@ for NAME in "${!REPOS[@]}"; do
 done
 
 echo "All downloaded in '$DIST_DIR/'"
+
