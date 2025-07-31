@@ -1,5 +1,11 @@
 # === CONFIG RELEASE ===
-RELEASE_TAG="v0.1"
+read -p "Enter the release tag (e.g., v0.2): " RELEASE_TAG
+if [[ -z "$RELEASE_TAG" ]]; then
+    echo "Release tag cannot be empty. Exiting."
+    exit 1
+fi
+echo "Release tag set to: $RELEASE_TAG"
+
 RELEASE_TITLE="mmcv-dep-cu126_$RELEASE_TAG"
 RELEASE_NOTES="Bundle release containing precompiled MMCV, MMDET, MMSEG dependencies for CUDA 12.6."
 REPO="KaceCM/mmcv-dep-cu126"
